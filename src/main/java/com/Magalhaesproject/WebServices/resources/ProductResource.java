@@ -9,9 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.Magalhaesproject.WebServices.entities.Category;
 import com.Magalhaesproject.WebServices.entities.Product;
-import com.Magalhaesproject.WebServices.services.CategoryService;
 import com.Magalhaesproject.WebServices.services.ProductService;
 
 @RestController
