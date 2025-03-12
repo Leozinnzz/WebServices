@@ -11,6 +11,7 @@ import org.springframework.context.annotation.Profile;
 import com.Magalhaesproject.WebServices.entities.Category;
 import com.Magalhaesproject.WebServices.entities.Order;
 import com.Magalhaesproject.WebServices.entities.OrderItem;
+import com.Magalhaesproject.WebServices.entities.Payment;
 import com.Magalhaesproject.WebServices.entities.Product;
 import com.Magalhaesproject.WebServices.entities.User;
 import com.Magalhaesproject.WebServices.entities.enums.OrderStatus;
@@ -83,6 +84,11 @@ public class TestConfig implements CommandLineRunner {
 		OrderItem oi4 = new OrderItem(o3, p5, 2, p5.getPrice()); 
 		
 		orderItemRepository.saveAll(Arrays.asList(oi1, oi2, oi3, oi4));
+		
+		Payment pay1 = new Payment(null, Instant.parse("2025-03-10T19:53:07Z"), o1);
+		o1.setPayment(pay1);
+		
+		orderRepository.save(o1);
 		
 		
 
